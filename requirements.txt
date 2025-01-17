@@ -1,1 +1,6 @@
-Flask==2.3.2
+Flask==1.1
+Flask-Login==0.4.1
+numpy==1.16.4
+
+#Для встановлення залежностей з файлу requirements.txt використовується команда:
+#python -m pip install -r requirements.txt
