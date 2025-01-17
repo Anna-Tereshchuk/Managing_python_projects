@@ -1,6 +1,11 @@
 Flask==1.1
 Flask-Login==0.4.1
 numpy==1.16.4
+requests
+pytest
+flake8
+numpy
+# та інші необхідні бібліотеки
 
 #Для встановлення залежностей з файлу requirements.txt використовується команда:
 #python -m pip install -r requirements.txt
