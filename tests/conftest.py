@@ -4,6 +4,8 @@ from socket import socket
 from subprocess import Popen, PIPE
 from sys import executable
 from time import monotonic, sleep
+from nlp.db import create_schema
+
 
 
 import pytest
