@@ -1,6 +1,5 @@
 import re
 
-
 def sentencize(text):
     """Split text to sentences.
 
