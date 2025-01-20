@@ -10,10 +10,20 @@ from nlp.db import create_schema
 
 import pytest
 import requests
-
+import pytest
+import sqlite3
+from db import create_schema
 Server = namedtuple('Server', ['url', 'process'])
 
+@pytest.fixture
+def database():
+    """Fixture to create an in-memory SQLite database for testing."""
+    conn = sqlite3.connect(':memory:')  # In-memory database
+    create_schema(conn)  # Create the schema
+    yield conn  # Provide the connection to the test
+    conn.close()  # Cleanup after the test
 
+    
 @pytest.fixture
 def server(timeout_sec=30):
     port = random_port()
